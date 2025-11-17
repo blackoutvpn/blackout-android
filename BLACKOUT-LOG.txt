@@ -1,0 +1,5 @@
+Branding and tile icon secure.
+Need to fix:
+- Side menu (get rid of Wireguard for Android, donate, etc)
+
+home/niel/StudioProjects

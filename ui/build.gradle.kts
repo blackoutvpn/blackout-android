@@ -13,25 +13,34 @@ plugins {
 
 android {
     compileSdk = 36
+
+    namespace = "com.wireguard.android"          // R/BR/BuildConfig live here
+
     buildFeatures {
         buildConfig = true
         dataBinding = true
         viewBinding = true
     }
-    namespace = pkg
+
     defaultConfig {
-        applicationId = pkg
+        applicationId = "com.blackoutvpnau.android" // installable package id
         minSdk = 24
         targetSdk = 36
         versionCode = providers.gradleProperty("wireguardVersionCode").get().toInt()
         versionName = providers.gradleProperty("wireguardVersionName").get()
         buildConfigField("int", "MIN_SDK_VERSION", minSdk.toString())
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
         isCoreLibraryDesugaringEnabled = true
     }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = true
@@ -54,15 +63,18 @@ android {
             matchingFallbacks += "release"
         }
     }
+
     androidResources {
         generateLocaleConfig = true
     }
+
     lint {
         disable += "LongLogTag"
         warning += "MissingTranslation"
         warning += "ImpliedQuantity"
     }
 }
+
 
 dependencies {
     implementation(project(":tunnel"))

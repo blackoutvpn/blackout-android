@@ -1,18 +1,82 @@
-/.gradle/
-/.idea/*.xml
-/.idea/caches/
-/.idea/dictionaries/
-/.idea/libraries/
-/captures/
-/local.properties
-.DS_Store
-.cxx/
-Thumbs.db
-build/
-*.apk
-*.class
-*.dex
+# ====================================
+# ANDROID & GRADLE
+# ====================================
+.gradle/
+**/.gradle/
+**/build/
+**/intermediates/
+**/tmp/
+**/.cxx/
+
+# Gradle local config
+local.properties
+
+# ====================================
+# ANDROID STUDIO (INTELLIJ)
+# ====================================
+.idea/
 *.iml
+out/
+
+# Only keep Gradle wrapper files
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# ====================================
+# BUILD ARTIFACTS
+# ====================================
+*.apk
+*.ap_
+*.aab
+*.aar
+*.dex
+*.class
+*.so
+*.jar
+*.war
+*.ear
+
+# ====================================
+# NDK / CMAKE
+# ====================================
+.cmake/
+**/obj/
+**/libs/
+
+# ====================================
+# SIGNING / SECRETS — DO NOT COMMIT
+# ====================================
 *.jks
-gradlew.bat
+*.keystore
+keystore.properties
+signing.properties
+*.pem
+*.crt
+*.key
+
+# WireGuard keys / configs
+config.zip
+**/Documents/Blackout VPN/*
+
+# ====================================
+# LOGS / TEMP FILES
+# ====================================
+*.log
+*.tmp
+
+# ====================================
+# OS GARBAGE
+# ====================================
+.DS_Store
+Thumbs.db
+
+# ====================================
+# CAPTURES (Android Studio)
+# ====================================
+captures/
+
+# ====================================
+# YOUR OLD PROJECT STUFF YOU WANT IGNORED
+# ====================================
 maint/
+
