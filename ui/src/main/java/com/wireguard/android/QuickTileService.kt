@@ -162,7 +162,7 @@ class QuickTileService : TileService() {
 
         when (val tunnel = tunnel) {
             null -> {
-                tile.label = getString(R.string.app_name)
+                tile.label = "Blackout VPN"
                 tile.state = Tile.STATE_INACTIVE
                 tile.icon = iconOff
             }

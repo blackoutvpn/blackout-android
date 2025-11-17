@@ -1,7 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-  ~ Copyright © 2017-2025 WireGuard LLC. All Rights Reserved.
-  ~ SPDX-License-Identifier: Apache-2.0
-  -->
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright © 2017-2025 WireGuard LLC. All Rights Reserved. -->
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <style name="WireGuardTheme.Toolbar" parent="Widget.Material3.Toolbar">
@@ -14,6 +12,7 @@
         <item name="bottomSheetDialogTheme">@style/WireGuardTheme.BottomSheetDialog</item>
         <item name="android:statusBarColor">?android:colorBackground</item>
         <item name="android:windowLightStatusBar">@bool/light_status_bar</item>
+        <!-- DO NOT set windowBackground here (would apply to every screen) -->
     </style>
 
     <!-- Various additional API-specific features in values-v*/styles.xml -->
@@ -46,4 +45,5 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+
 </resources>
